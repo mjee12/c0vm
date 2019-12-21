@@ -1,0 +1,74 @@
+/* int next_rand(int last) {
+  return last * 1664525 + 1013904223;
+}
+
+int main() { 
+  return next_rand(0xdeadbeef);
+} */
+
+/* int main() {
+  int lo = 3;
+  int hi = 6;
+  int mid = lo + (hi - lo)/2;
+  return mid;
+} */
+/* #use <string>
+#use <conio>
+
+int main () {
+  string h = "Hello";
+  return string_length(h);
+} */
+
+/* int main() {
+  return (3+4)*5/2;
+} */
+
+/* int main () { 
+  int i; 
+  int sum = 0; 
+  for (i = 15; i <= 122; i++) 
+    sum += i; 
+  return sum; 
+}
+ */
+/* int factorial(int n) { 
+  return n == 0 ? 1 : n * factorial(n-1); 
+} 
+
+int main () {
+  printint(factorial(15));
+  println(" is the factorial of 15");
+  return 0; 
+} */
+
+/* #use <conio>
+
+int main() {
+  int[] A = alloc_array(int, 100);
+  for (int i = 0; i < 100; i++)
+    A[i] = i;
+  return A[99];
+} */
+
+struct point {
+  int x;
+  int y;
+};
+
+typedef struct point* point;
+
+point reflect(point p) {
+  point q = alloc(struct point);
+  q->x = p->x;
+  q->y = p->x;
+  return q;
+}
+
+int main() {
+  point p = alloc(struct point);
+  p->x = 1;
+  p->y = 2;
+  point q = reflect(p);
+  return q->x*10+q->y;
+}
